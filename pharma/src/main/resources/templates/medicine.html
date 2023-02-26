@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Pharma-see</title>
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+    <!-- header section strats -->
+ <table class="header-table">
+  <tr>
+    <td>
+      <a th:href="@{/}">
+        <img alt="" src="images/logo.png" style="vertical-align:middle;">
+        <span style="margin-left:10px; font-weight:bold; font-size:20px">Pharma-see</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/medicine}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Medicine</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/contact}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Contact</span>
+      </a>
+    </td>
+     <td>
+      <a th:href="@{/search}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Search</span>
+      </a>
+    </td>
+         <td>
+      <a th:href="@{/searchorder}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Search</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/cart}" style="text-decoration:none;">
+        <img alt="" src="images/shopping-cart.png" style="vertical-align:middle;">
+        <span style="margin-left:10px;">Cart</span>
+      </a>
+    </td>
+        <td>
+      <a href="/admin" style="text-decoration:none;">
+        <span style="margin-left:10px;">Admin</span>
+      </a>
+    </td>
+  </tr>
+</table>
+    <!-- end header section -->
+  <!-- health section -->
+<section class="health_section">
+  <div th:each="product : ${lp}" class="item">
+    <div class="box">
+        <div class="btn_container">
+            <a th:href="@{'./show/' + ${product.id}}">
+              Buy Now
+            </a>
+        </div>
+        <div class="img-box">
+            <img th:src="${product.image}" alt="">
+        </div>
+        <div class="detail-box">
+            <div class="name">
+                <h6 th:text="${product.name}"></h6>
+                </div>
+                <h6 class="priceMed" th:text="${product.price} + '$'"></h6>
+                <h6>$</h6>
+        </div>
+    </div>
+  </div>
+</section>
+  <!-- end health section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Magdalena Dobek
+    </p>
+  </section>
+  <!-- footer section -->
+</body>
+
+</html>

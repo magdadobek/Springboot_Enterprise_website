@@ -1,0 +1,347 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.layout_padding {
+  padding: 100px 0;
+}
+
+.layout_padding2 {
+  padding: 55px 0;
+}
+
+.layout_padding2-top {
+  padding-top: 55px;
+}
+
+.layout_padding2-bottom {
+  padding-bottom: 55px;
+}
+
+.layout_padding-top {
+  padding-top: 100px;
+}
+
+.layout_padding-bottom {
+  padding-bottom: 100px;
+}
+
+/*header section*/
+.header-table{
+	display: grid;
+	grid-gap: 20px;
+	background-color: #091D39;
+}
+
+a {
+  text-decoration: none;
+  color: #E1EAF6; 
+}
+
+/*end header section*/
+/*index*/
+
+.index-table {
+    width: 100%;
+    background-image: url("https://pbs.twimg.com/ext_tw_video_thumb/1337074040708747264/pu/img/mS10_dIIFQ7KIZPv.jpg:large");
+    background-size: cover;
+}
+
+.image-td {
+    background-color: white;
+}
+
+.img-box-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box-index img {
+    max-width: 100%;
+}
+
+.index-td {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.index-td h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.index-td p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn_container-index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_container-index a {
+    background-color: #1FDBE7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.btn_container-index a:hover {
+    background-color: #3e8e41;
+}
+
+
+/*end index*/
+.health_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box img {
+    max-width: 80%;
+}
+
+.health_section .item {
+    width: 25%;
+    margin: 1%;
+    text-align: center;
+}
+
+.health_section .item .box {
+    background-color: #f5f5f5;
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    position: relative;
+}
+
+.health_section .item .box .btn_container {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.health_section .item .box .btn_container a {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.health_section {
+    position: relative;
+}
+
+.btn_container {
+    position: absolute;
+    bottom: 10px; /* distance from bottom */
+    right: 10px; /* distance from right */
+}
+
+.name {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.health_section .item .box .img-box img {
+    width: 80%;
+    height: 80%;
+}
+
+.health_section .item .box .detail-box .text .price {
+    color: #4CAF50;
+    font-weight: bold;
+}
+/*end health*/
+table.searchform-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table.searchform-table tr.searchform-tr {
+  border-bottom: 1px solid #ccc;
+}
+
+table.searchform-table td.searchform-td {
+  padding: 10px;
+  width: 100%;
+}
+
+table.searchform-table input[type="text"] {
+  width: 100%;
+}
+
+table.searchform-table select {
+  width: 100%;
+}
+
+#searchLink1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+#searchLink1:hover {
+  background-color: #3e8e41;
+}
+
+#search-link2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+#search-link2:hover {
+  background-color: #3e8e41;
+}
+
+#search-link3 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+#search-link3:hover {
+  background-color: #3e8e41;
+}
+
+.btn_search {
+  display: inline-block;
+}
+
+/*end search form*/
+.about_section {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about_section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about_section .container .img-box {
+  margin: 45px 0;
+  margin-left: 40px;
+}
+
+.about_section .container .img-box img {
+  width: 100%;
+}
+
+.about_section .container .detail-box a {
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #2c2c2c;
+  border: 1px solid #2c2c2c;
+  color: #ffffff;
+  margin-top: 35px;
+}
+/*end about*/
+
+.contact{
+	text-align: center;
+	color: white;
+	width: 100%;
+    background-image: url("https://pbs.twimg.com/ext_tw_video_thumb/1337074040708747264/pu/img/mS10_dIIFQ7KIZPv.jpg:large");
+    background-size: cover;
+}
+
+/* end contact*/
+.footer_section {
+  background-color: #121111;
+  font-weight: 500;
+}
+
+.footer_section p {
+  color: #fbfcfd;
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #9b9b9b;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.footer_section a {
+  color: #fbfcfd;
+}
+
+.classtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.classtable th, .classtable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.classtable th {
+  background-color: #ddd;
+}
+
+.classtable .price {
+  font-weight: bold;
+}
+
+.priceMed{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 20px;
+}
+
+
+/* end footer section*/

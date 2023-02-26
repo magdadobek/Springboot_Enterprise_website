@@ -1,0 +1,96 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pharma-See Admin Panel</title>
+<link href="css/style.css" rel="stylesheet" />
+<style>
+.product-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.product-table td, .product-table th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.product-table thead tr {
+  background-color: #f2f2f2;
+}
+
+.product-table a {
+  color: blue;
+  text-decoration: underline;
+}
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+ <table class="header-table">
+  <tr>
+    <td>
+      <a href="/pharma">
+        <img alt="" src="images/logo.png" style="vertical-align:middle;">
+        <span style="margin-left:10px; font-weight:bold; font-size:20px">Back to main site</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/products}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Products</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/ingredients}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Ingredients</span>
+      </a>
+    </td>
+     <td>
+      <a th:href="@{/problems}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Problems</span>
+      </a>
+    </td>
+         <td>
+      <a th:href="@{/producers}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Producers</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/orders}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Orders</span>
+      </a>
+    </td>
+  </tr>
+</table>
+<a th:href="@{./addProblem}" class="button">Add new problem</a>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<table class="product-table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Delete</td>
+    </tr>
+  </thead>
+  <tr th:each="problem : ${problem}">
+    <td th:text="${problem.id}">ID</td>
+    <td th:text="${problem.name}">Name</td>
+    <td><a th:href="@{'./deleteProblem/' + ${problem.id}}">Delete</a></td>
+  </tr>
+</table>
+
+</body>
+</html>

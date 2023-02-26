@@ -1,0 +1,113 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pharma-See Admin Panel</title>
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+ <table class="header-table">
+  <tr>
+    <td>
+      <a href="/pharma">
+        <img alt="" src="images/logo.png" style="vertical-align:middle;">
+        <span style="margin-left:10px; font-weight:bold; font-size:20px">Back to main site</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/products}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Products</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/ingredients}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Ingredients</span>
+      </a>
+    </td>
+     <td>
+      <a th:href="@{/problems}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Problems</span>
+      </a>
+    </td>
+         <td>
+      <a th:href="@{/producers}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Producers</span>
+      </a>
+    </td>
+    <td>
+      <a th:href="@{/orders}" style="text-decoration:none;">
+        <span style="margin-left:10px;">Manage Orders</span>
+      </a>
+    </td>
+  </tr>
+</table>
+<form action="#" th:action="@{/save_product}" th:object="${product}" method="post">
+ <table th:with="problem=${problem}, ingredient=${ingredient}, producer=${producer}">
+ <tr>
+ <td>Name</td>
+ <td><input type="text" th:field="*{name}" required/></td>
+ </tr>
+ <tr>
+ <td>Producer</td>
+ <td>    <select id="producer-select" th:field="*{producer}">
+      <option th:each="producer : ${producer}"
+              th:value="${producer.id}"
+              th:text="${producer.name}">
+      </option>
+    </select></td>
+ </tr>
+ <tr>
+ <td>Ingredient</td>
+ <td>    <select id="ingredient-select" th:field="*{ingredient}">
+      <option th:each="ingredient : ${ingredient}"
+              th:value="${ingredient.id}"
+              th:text="${ingredient.name}">
+      </option>
+    </select></td>
+ </tr>
+  <tr>
+ <td>Indication</td>
+ <td>    <select id="indication-select" th:field="*{indication}">
+      <option th:each="problem : ${problem}"
+              th:value="${problem.id}"
+              th:text="${problem.name}">
+      </option>
+    </select></td>
+ </tr>
+  <tr>
+ <td>Side Effect</td>
+ <td>    <select id="side-effect-select" th:field="*{side_effect}">
+      <option th:each="problem : ${problem}"
+              th:value="${problem.id}"
+              th:text="${problem.name}">
+      </option>
+    </select></td>
+ </tr>
+  <tr>
+ <td>Prescription</td>
+ <td>    <select id="prescription-select" th:field="*{prescription}">
+      <option
+		value="false">false
+      </option>
+            <option
+		value="true">true
+      </option>
+    </select></td>
+ </tr>
+  <tr>
+ <td>Usage</td>
+ <td><input type="text" th:field="*{usage}" required/></td>
+ </tr>
+  <tr>
+ <td>Price</td>
+  <td><input type="text" th:field="*{price}" pattern="[0-9]+.[0-9]{2}" required/></td>
+ </tr>
+  <tr>
+ <td>Image</td>
+ <td><input type="text" th:field="*{image}" required/></td>
+ </tr>
+ </table>
+ <button type="submit">Save</button>
+ </form>
+
+</body>
+</html>
